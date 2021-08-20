@@ -27,8 +27,11 @@ namespace API_Mini.AnimalCrossingIOService
 		{
 			FossilSelected = FossilName;
 			FossilResponse = await CallManager.MakeFossilRequestAsync(FossilSelected);
-			Json_response = JObject.Parse(FossilResponse);
-			FossilDTO.DeserializeReponse(FossilResponse);
+			if (CallManager.StatusCode == 200)
+			{
+				Json_response = JObject.Parse(FossilResponse);
+				FossilDTO.DeserializeReponse(FossilResponse);
+			}
 		}
 	}
 }

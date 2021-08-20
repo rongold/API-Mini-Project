@@ -25,8 +25,11 @@ namespace API_Mini.AnimalCrossingIOService
 		{
 			BugSelected = BugId;
 			BugResponse = await CallManager.MakeBugRequestAsync(BugSelected);
-			Json_response = JObject.Parse(BugResponse);
-			BugDTO.DeserializeReponse(BugResponse);
+			if (CallManager.StatusCode == 200)
+			{
+				Json_response = JObject.Parse(BugResponse);
+				BugDTO.DeserializeReponse(BugResponse);
+			}
 		}
 	}
 }
