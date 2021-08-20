@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace API_Mini.AnimalCrossingIOService.DataHandling
+namespace API_Mini.AnimalCrossingIOService
 {
-	public interface IResponse
-	{
-	}
+    class VillagerService
+    {
+    }
 }

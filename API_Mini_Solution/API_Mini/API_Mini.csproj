@@ -76,6 +76,7 @@
     <Compile Include="AnimalCrossingIOService\DataHandling\IResponse.cs" />
     <Compile Include="AnimalCrossingIOService\DataHandling\Model.cs" />
     <Compile Include="AnimalCrossingIOService\HTTPManager\CallManager.cs" />
+    <Compile Include="AnimalCrossingIOService\VillagerService.cs" />
     <Compile Include="AppConfigReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
