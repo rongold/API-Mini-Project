@@ -94,7 +94,7 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 	}
 
 
-	public class SeaCreaturesResponse
+	public class SeaCreaturesResponse : IResponse
 	{
 		public int id { get; set; }
 		public string filename { get; set; }
