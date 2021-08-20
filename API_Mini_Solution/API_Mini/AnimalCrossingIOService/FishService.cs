@@ -25,8 +25,11 @@ namespace API_Mini.AnimalCrossingIOService
 		{
 			FishSelected = FishId;
 			FishResponse = await CallManager.MakeFishRequestAsync(FishSelected);
-			Json_response = JObject.Parse(FishResponse);
-			FishDTO.DeserializeReponse(FishResponse);
+			if (CallManager.StatusCode == 200) 
+			{
+				Json_response = JObject.Parse(FishResponse);
+				FishDTO.DeserializeReponse(FishResponse);
+			}
 		}
 	}
 }
