@@ -1,9 +1,12 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace API_Mini
 {
-	public class AppConfigReader
+	class AppConfigReader
 	{
-		public static readonly string BaseUrl = ConfigurationManager.AppSettings["base_url"];
 	}
 }
