@@ -72,9 +72,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimalCrossingIOService\BugService.cs" />
     <Compile Include="AnimalCrossingIOService\DataHandling\DTO.cs" />
     <Compile Include="AnimalCrossingIOService\DataHandling\IResponse.cs" />
     <Compile Include="AnimalCrossingIOService\DataHandling\Model.cs" />
+    <Compile Include="AnimalCrossingIOService\FishService.cs" />
     <Compile Include="AnimalCrossingIOService\HTTPManager\CallManager.cs" />
     <Compile Include="AnimalCrossingIOService\VillagerService.cs" />
     <Compile Include="AppConfigReader.cs" />
