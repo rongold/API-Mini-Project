@@ -11,5 +11,6 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
         {
             Response = JsonConvert.DeserializeObject<ResponseType>(response);
         }
+
     }
 }
