@@ -77,18 +77,23 @@
     <Compile Include="AnimalCrossingIOService\DataHandling\IResponse.cs" />
     <Compile Include="AnimalCrossingIOService\DataHandling\Model.cs" />
     <Compile Include="AnimalCrossingIOService\FishService.cs" />
+    <Compile Include="AnimalCrossingIOService\FossilService.cs" />
     <Compile Include="AnimalCrossingIOService\HTTPManager\CallManager.cs" />
     <Compile Include="AnimalCrossingIOService\VillagerService.cs" />
     <Compile Include="AppConfigReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\WhenTheBugServiceIsCalled_WithInvalidBugId.cs" />
+    <Compile Include="Tests\WhenTheBugServiceIsCalled_WithValidBugId.cs" />
+    <Compile Include="Tests\WhenTheFishServiceIsCalled_WithInvalidFishId.cs" />
+    <Compile Include="Tests\WhenTheFishServiceIsCalled_WithValidFishId.cs" />
+    <Compile Include="Tests\WhenTheFossilServiceIsCalled_WithInvalidFossilName.cs" />
+    <Compile Include="Tests\WhenTheFossilServiceIsCalled_WithValidFossilName.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
