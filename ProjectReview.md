@@ -24,7 +24,7 @@ Create a test framework for the RESTful API from Animal Crossing: New Horizons -
 
  [Animal Crossing API](http://acnhapi.com/doc)
 
-![ERD](h)
+![ERD](Images/Images.jpg)
 
 #### Tools:
 
@@ -82,11 +82,11 @@ Animal Crossing was chosen due to the respective admiration and nostalgic feelin
 
 ##### Kanban Board at the start
 
-![Start Sprint Kanban Board](h)
+![Start Sprint Kanban Board](Images/Sprint1_Start.JPG)
 
 ##### Kanban Board in the middle
 
-![Middle Sprint Kanban Board](h)
+![Middle Sprint Kanban Board](Images/Sprint1_Midle.JPG)
 
 ##### Kanban Board at the end
 
