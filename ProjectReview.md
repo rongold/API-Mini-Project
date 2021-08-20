@@ -11,10 +11,12 @@
     + [Team](#team)
     + [Choosing API Framework to create](#choosing-api-framework-to-create)
     + [Sprint Review](#sprint-review)
-- [Sprint Retrospective](#sprint-retrospective)
+    
+    * [Sprint Retrospective](#sprint-retrospective)
 - [Sprint 2](#sprint-2)
     + [Sprint Review](#sprint-review-1)
-- [Sprint Retrospective](#sprint-retrospective-1)
+    
+    * [Sprint Retrospective](#sprint-retrospective-1)
 - [Sprint Project Retrospective](#sprint-project-retrospective)
 - [In Conclusion](#in-conclusion)
 
@@ -90,7 +92,7 @@ Animal Crossing was chosen due to the respective admiration and nostalgic feelin
 
 ##### Kanban Board at the end
 
-![End Sprint Kanban Board](h)
+![End Sprint Kanban Board](Images/Sprint1_End.JPG)
 
 ##### Sprint Review
 
