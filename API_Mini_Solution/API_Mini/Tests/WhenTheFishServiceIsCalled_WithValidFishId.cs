@@ -40,7 +40,7 @@ namespace API_Mini.Tests
 			var actual = _fishService.FishDTO.Response.availability.timearray;
 			Assert.That(actual[0], Is.EqualTo(16));
 			Assert.That(actual[7], Is.EqualTo(23));
-			Assert.That(actual[14], Is.EqualTo(5));
+			Assert.That(actual[14], Is.EqualTo(6));
 
 		}
 	}
