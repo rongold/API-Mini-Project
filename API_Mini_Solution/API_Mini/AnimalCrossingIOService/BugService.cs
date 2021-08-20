@@ -24,7 +24,7 @@ namespace API_Mini.AnimalCrossingIOService
 		public async Task MakeRequestAsync(int BugId)
 		{
 			BugSelected = BugId;
-			BugResponse = await CallManager.MakeFishRequestAsync(BugSelected);
+			BugResponse = await CallManager.MakeBugRequestAsync(BugSelected);
 			Json_response = JObject.Parse(BugResponse);
 			BugDTO.DeserializeReponse(BugResponse);
 		}
