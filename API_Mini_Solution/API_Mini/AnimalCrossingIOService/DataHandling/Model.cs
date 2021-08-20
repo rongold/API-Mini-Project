@@ -121,4 +121,19 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 		public int[] timearray { get; set; }
 	}
 
+	public class BugsResponse
+	{
+		public int id { get; set; }
+		public string filename { get; set; }
+		public Name name { get; set; }
+		public Availability availability { get; set; }
+		public int price { get; set; }
+		public int priceflick { get; set; }
+		public string catchphrase { get; set; }
+		public string museumphrase { get; set; }
+		public string image_uri { get; set; }
+		public string icon_uri { get; set; }
+	}
+
+
 }
