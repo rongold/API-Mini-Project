@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace API_Mini.AnimalCrossingIOService.DataHandling
 {
-	interface IResponse
+	public interface IResponse
 	{
 	}
 }

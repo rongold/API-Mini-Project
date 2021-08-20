@@ -1,12 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace API_Mini.AnimalCrossingIOService.DataHandling
 {
-	class DTO
+	public class DTO<ResponseType> where ResponseType: IResponse, new()
 	{
-	}
+        public ResponseType Response { get; set; }
+        //method that creates the above object using the response from the API
+        public void DeserializeReponse(string response)
+        {
+            Response = JsonConvert.DeserializeObject<ResponseType>(response);
+        }
+    }
 }
