@@ -136,4 +136,14 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 	}
 
 
+	public class Fossils
+	{
+		public string filename { get; set; }
+		public Name name { get; set; }
+		public int price { get; set; }
+		public string museumphrase { get; set; }
+		public string image_uri { get; set; }
+		public string partof { get; set; }
+	}
+
 }
