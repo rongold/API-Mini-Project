@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using RestSharp;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System;
 using System.Threading.Tasks;
+using API_Mini.AnimalCrossingIOService.DataHandling;
 
 namespace API_Mini.AnimalCrossingIOService
 {
-    class VillagerService
+    public class VillagerService
     {
+        public CallManager CallManager { get; set; }
+        public DTO<>
     }
 }
