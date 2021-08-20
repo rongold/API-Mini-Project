@@ -94,4 +94,31 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 	}
 
 
+	public class SeaCreaturesResponse
+	{
+		public int id { get; set; }
+		public string filename { get; set; }
+		public Name name { get; set; }
+		public SeaCreatureAvailability availability { get; set; }
+		public string speed { get; set; }
+		public string shadow { get; set; }
+		public int price { get; set; }
+		public string catchphrase { get; set; }
+		public string image_uri { get; set; }
+		public string icon_uri { get; set; }
+		public string museumphrase { get; set; }
+	}
+
+	public class SeaCreatureAvailability
+	{
+		public string monthnorthern { get; set; }
+		public string monthsouthern { get; set; }
+		public string time { get; set; }
+		public bool isAllDay { get; set; }
+		public bool isAllYear { get; set; }
+		public int[] montharraynorthern { get; set; }
+		public int[] montharraysouthern { get; set; }
+		public int[] timearray { get; set; }
+	}
+
 }
