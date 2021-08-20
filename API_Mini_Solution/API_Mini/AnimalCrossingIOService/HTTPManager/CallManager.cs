@@ -27,5 +27,14 @@ namespace API_Mini.AnimalCrossingIOService
             StatusCode = (int)response.StatusCode;
             return response.Content;
         }
+        public async Task<string> MakeFishRequestAsync(string fishId)
+        {
+            var request = new RestRequest();
+            request.AddHeader("Content-Type", "application/json");
+            request.Resource = $"fish/{fishId.ToLower().Replace(" ", "")}";
+            var response = await _client.ExecuteAsync(request);
+            StatusCode = (int)response.StatusCode;
+            return response.Content;
+        }
     }
 }
