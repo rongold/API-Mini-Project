@@ -18,20 +18,20 @@ namespace API_Mini.AnimalCrossingIOService
             _client = new RestClient(AppConfigReader.BaseUrl);
         }
 
-        public async Task<string> MakeVillagerRequestAsync(string villagerId)
+        public async Task<string> MakeVillagerRequestAsync(int villagerId)
         {
             var request = new RestRequest();
             request.AddHeader("Content-Type", "application/json");
-            request.Resource = $"villagers/{villagerId.ToLower().Replace(" ", "")}";
+            request.Resource = $"villagers/{villagerId}";
             var response = await _client.ExecuteAsync(request);
             StatusCode = (int)response.StatusCode;
             return response.Content;
         }
-        public async Task<string> MakeFishRequestAsync(string fishId)
+        public async Task<string> MakeFishRequestAsync(int fishId)
         {
             var request = new RestRequest();
             request.AddHeader("Content-Type", "application/json");
-            request.Resource = $"fish/{fishId.ToLower().Replace(" ", "")}";
+            request.Resource = $"fish/{fishId}";
             var response = await _client.ExecuteAsync(request);
             StatusCode = (int)response.StatusCode;
             return response.Content;
