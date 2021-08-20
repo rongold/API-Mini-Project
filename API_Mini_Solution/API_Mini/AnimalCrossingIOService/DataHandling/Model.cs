@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace API_Mini.AnimalCrossingIOService.DataHandling
 {
 
-	public class VillagerResponse
+	public class VillagerResponse : IResponse
 	{
 		public int id { get; set; }
 		public string filename { get; set; }
@@ -64,7 +64,7 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 		public string catchEUru { get; set; }
 	}
 
-	public class FishResponse
+	public class FishResponse : IResponse
 	{
 		public int id { get; set; }
 		public string filename { get; set; }
@@ -121,7 +121,7 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 		public int[] timearray { get; set; }
 	}
 
-	public class BugsResponse
+	public class BugsResponse : IResponse
 	{
 		public int id { get; set; }
 		public string filename { get; set; }
@@ -136,7 +136,7 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 	}
 
 
-	public class Fossils
+	public class FossilsResponse : IResponse
 	{
 		public string filename { get; set; }
 		public Name name { get; set; }
