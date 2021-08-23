@@ -48,4 +48,30 @@ This Framework was built with Visual Studio 2019 and may operate differently acc
 
 3. Open the application: "API_Mini_Solution.sln"
 
+4. In Search bar type "Solution Explorer" and press Enter
+
+   Check "Tests" and  "AnimalCrossingIOService" folder are present
+
+   ![](Images/Explore.JPG)
+
+5. Click on the "Build" tool option on the top
+
+   On the drop down click on the "Clean Solution"
+
+   Proceed to click on the "Rebuild Solution"
+
+   ![](Images/Build.JPG)
+
+   
+
+### Run Tests
+
+1. Click on "Test Explorer" on the bottom of Visual Studio
+
+2. Click on the Run button
+
+   Check all tests passed
+
+   ![](Images/Build.JPG)
+
    
