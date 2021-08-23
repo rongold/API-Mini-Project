@@ -28,5 +28,12 @@ namespace API_Mini.Tests
             Assert.That(_fishService.Json_response.Count, Is.EqualTo(80));
 
         }
+        [Test]
+        public void CheckFishExistsInResponse()
+        {
+            Assert.That(_fishService.Json_response["bitterling"], Is.Not.Null);
+            Assert.That(_fishService.Json_response["betta"], Is.Not.Null);
+            Assert.That(_fishService.Json_response["coelacanth"], Is.Not.Null);
+        }
     }
 }

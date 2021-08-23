@@ -28,5 +28,12 @@ namespace API_Mini.Tests
             Assert.That(_villagerService.Json_response.Count, Is.EqualTo(391));
 
         }
+        [Test]
+        public void CheckVillagerssExistsInResponse()
+        {
+            Assert.That(_villagerService.Json_response["ant00"], Is.Not.Null);
+            Assert.That(_villagerService.Json_response["gor05"], Is.Not.Null);
+            Assert.That(_villagerService.Json_response["wol12"], Is.Not.Null);
+        }
     }
 }
