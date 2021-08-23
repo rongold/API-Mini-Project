@@ -121,11 +121,11 @@ In this sprint, we manage to
 
 ##### Kanban Board at the start
 
-![Start Sprint Kanban Board](h)
+![Start Sprint Kanban Board](Images/Sprint2_Start.JPG)
 
 ##### Kanban Board at the end
 
-![End Sprint Kanban Board](h)
+![End Sprint Kanban Board](Images/Sprint2_End.JPG)
 
 ##### Sprint Achievement
 
@@ -142,6 +142,7 @@ In this sprint, we manage to
 
 
 ##### Time Management: 4/5
+
 
 
 
