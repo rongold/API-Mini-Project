@@ -137,19 +137,19 @@ In this sprint, we manage to
 
 ### Sprint Retrospective
 
-##### Mood: /10
+##### Mood: 9/10
 
 
 
-##### Time Management: /3
+##### Time Management: 5/5
 
 
 
-#####  Work load: 2/3
+#####  Work load: 2/5
 
 
 
-##### Blockers: 1/3
+##### Blockers: 0/5
 
 
 
