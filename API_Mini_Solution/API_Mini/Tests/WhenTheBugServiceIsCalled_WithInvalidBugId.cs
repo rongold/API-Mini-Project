@@ -14,7 +14,7 @@ namespace API_Mini.Tests
 		public async Task OneTimeSetUpAsync()
 		{
 			_bugService = new BugService();
-			await _bugService.MakeRequestAsync(9999);
+			await _bugService.MakeRequestAsync("9999");
 		}
 
 		[Test]

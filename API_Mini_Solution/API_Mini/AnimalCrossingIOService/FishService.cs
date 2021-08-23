@@ -11,7 +11,7 @@ namespace API_Mini.AnimalCrossingIOService
 		public JObject Json_response { get; set; }
 		public DTO<FishResponse> FishDTO { get; set; }
 		public string FishResponse { get; set; }
-		public int FishSelected { get; set; }
+		public string FishSelected { get; set; }
 		#endregion
 
 		public FishService()
@@ -21,7 +21,7 @@ namespace API_Mini.AnimalCrossingIOService
 		}
 
 		//Method that defines and makes the API request and stores the responses
-		public async Task MakeRequestAsync(int FishId)
+		public async Task MakeRequestAsync(string FishId)
 		{
 			FishSelected = FishId;
 			FishResponse = await CallManager.MakeFishRequestAsync(FishSelected);

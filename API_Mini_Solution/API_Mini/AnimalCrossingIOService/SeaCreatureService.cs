@@ -16,11 +16,14 @@ namespace API_Mini.AnimalCrossingIOService
             SeaCreatureDTO = new DTO<SeaCreaturesResponse>();
         }
 
-        public async Task MakeRequestAsync(int seaCreatureId)
+        public async Task MakeRequestAsync(string seaCreatureId)
         {
-            SeaCreatureResponse = await CallManager.MakeVillagerRequestAsync(seaCreatureId);
-            Json_response = JObject.Parse(SeaCreatureResponse);
-            SeaCreatureDTO.DeserializeReponse(SeaCreatureResponse);
+            SeaCreatureResponse = await CallManager.MakeSeaCreatureRequestAsync(seaCreatureId);
+            if (CallManager.StatusCode == 200)
+            {
+                Json_response = JObject.Parse(SeaCreatureResponse);
+                SeaCreatureDTO.DeserializeReponse(SeaCreatureResponse);
+            }           
         }
     }
 }

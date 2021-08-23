@@ -11,6 +11,7 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 	public class VillagerResponse : IResponse
 	{
 		public int Id { get; set; }
+		[JsonProperty("file-name")]
 		public string Filename { get; set; }
 		public Name Name { get; set; }
 		public string Personality { get; set; }
@@ -101,6 +102,7 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 	public class FishResponse : IResponse
 	{
 		public int Id { get; set; }
+		[JsonProperty("file-name")]
 		public string Filename { get; set; }
 		public Name Name { get; set; }
 		public Availability Availability { get; set; }
@@ -139,6 +141,7 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 	public class SeaCreaturesResponse : IResponse
 	{
 		public int Id { get; set; }
+		[JsonProperty("File-name")]
 		public string Filename { get; set; }
 		public Name Name { get; set; }
 		public SeaCreatureAvailability Availability { get; set; }
@@ -173,6 +176,7 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 	public class BugsResponse : IResponse
 	{
 		public int Id { get; set; }
+		[JsonProperty("file-name")]
 		public string Filename { get; set; }
 		public Name Name { get; set; }
 		public Availability Availability { get; set; }
@@ -190,6 +194,7 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 
 	public class FossilsResponse : IResponse
 	{
+		[JsonProperty("file-name")]
 		public string Filename { get; set; }
 		public Name Name { get; set; }
 		public int Price { get; set; }

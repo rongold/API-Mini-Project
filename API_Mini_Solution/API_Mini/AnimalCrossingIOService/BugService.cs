@@ -11,7 +11,7 @@ namespace API_Mini.AnimalCrossingIOService
 		public JObject Json_response { get; set; }
 		public DTO<BugsResponse> BugDTO { get; set; }
 		public string BugResponse { get; set; }
-		public int BugSelected { get; set; }
+		public string BugSelected { get; set; }
 		#endregion
 
 		public BugService()
@@ -21,7 +21,7 @@ namespace API_Mini.AnimalCrossingIOService
 		}
 
 		//Method that defines and makes the API request and stores the responses
-		public async Task MakeRequestAsync(int BugId)
+		public async Task MakeRequestAsync(string BugId)
 		{
 			BugSelected = BugId;
 			BugResponse = await CallManager.MakeBugRequestAsync(BugSelected);

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
 using API_Mini.AnimalCrossingIOService.DataHandling;
+using Moq;
 
 namespace API_Mini.AnimalCrossingIOService
 {
@@ -16,15 +17,21 @@ namespace API_Mini.AnimalCrossingIOService
             VillagerDTO = new DTO<VillagerResponse>();
         }
 
-        public async Task MakeRequestAsync(int villagerId)
+        public async Task MakeRequestAsync(string villagerId)
         {
-            VillagerResponse = await CallManager.MakeVillagerRequestAsync(villagerId);
+            if (villagerId == "")
+            {
+            VillagerResponse = await CallManager.MakeVillagerRequestAsync("");
+            }
+            else
+            {
+                VillagerResponse = await CallManager.MakeVillagerRequestAsync(villagerId);
+            }           
             if (CallManager.StatusCode == 200)
             {
                 Json_response = JObject.Parse(VillagerResponse);
                 VillagerDTO.DeserializeReponse(VillagerResponse);
-            }
-            
+            }            
         }
     }
 }
