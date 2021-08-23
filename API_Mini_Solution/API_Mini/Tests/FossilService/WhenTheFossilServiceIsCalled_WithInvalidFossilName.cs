@@ -33,5 +33,10 @@ namespace API_Mini.Tests
 		{
 			Assert.That(_fossilService.FossilDTO.Response, Is.Null);
 		}
+		[Test]
+		public void FossilResponseMessageIsFossilNotFound()
+		{
+			Assert.That(_fossilService.FossilResponse, Is.EqualTo("Fossil not found"));
+		}
 	}
 }

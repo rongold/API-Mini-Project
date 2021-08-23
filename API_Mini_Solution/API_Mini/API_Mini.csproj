@@ -98,7 +98,7 @@
     <Compile Include="Tests\BugServiceTest\WhenTheBugServiceIsCalled_WithValidBugId.cs" />
     <Compile Include="Tests\FishServiceTest\WhenTheFishServiceIsCalled_WithInvalidFishId.cs" />
     <Compile Include="Tests\FishServiceTest\WhenTheFishServiceIsCalled_WithValidFishId.cs" />
-    <Compile Include="Tests\FossilService\WhenTheFossilServiceIsCalled_WithEmptyId.cs" />
+    <Compile Include="Tests\FossilService\WhenTheFossilServiceIsCalled_WithEmptyFossilId.cs" />
     <Compile Include="Tests\FossilService\WhenTheFossilServiceIsCalled_WithInvalidFossilName.cs" />
     <Compile Include="Tests\FossilService\WhenTheFossilServiceIsCalled_WithValidFossilName.cs" />
     <Compile Include="Tests\SeaCreatureTest\WhenTheSeaCreatureServiceIsCalled_WithInvalidSeaCreatureId.cs" />
@@ -106,10 +106,10 @@
     <Compile Include="Tests\VillagerServiceTest\WhenTheVillagerServiceIsCalled_WithEmptyVillagerId.cs" />
     <Compile Include="Tests\VillagerServiceTest\WhenTheVillagerServiceIsCalled_WithInvalidVillagerId.cs" />
     <Compile Include="Tests\VillagerServiceTest\WhenTheVillagerServiceIsCalled_WithValidVillagerId.cs" />
-    <Compile Include="Tests\WhenTheSeaCreatureServiceIsCalled_WithEmptySeaCreatureId.cs" />
-    <Compile Include="Tests\WhenTheFishServiceIsCalled_WithEmptyFishId.cs" />
+    <Compile Include="Tests\SeaCreatureTest\WhenTheSeaCreatureServiceIsCalled_WithEmptySeaCreatureId.cs" />
+    <Compile Include="Tests\FishServiceTest\WhenTheFishServiceIsCalled_WithEmptyFishId.cs" />
     <Compile Include="AnimalCrossingIOService\SeaCreatureService.cs" />
-    <Compile Include="Tests\WhenTheBugServiceIsCalled_WithEmptyBugId.cs" />
+    <Compile Include="Tests\BugServiceTest\WhenTheBugServiceIsCalled_WithEmptyBugId.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
