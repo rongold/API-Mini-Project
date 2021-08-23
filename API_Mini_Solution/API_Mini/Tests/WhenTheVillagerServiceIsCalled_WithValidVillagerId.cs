@@ -13,7 +13,7 @@ namespace API_Mini.Tests
         public async Task OneTimeSetupAsync()
         {
             _villagerService = new VillagerService();
-            await _villagerService.MakeRequestAsync(64);
+            await _villagerService.MakeRequestAsync("64");
         }
 
         [Test]

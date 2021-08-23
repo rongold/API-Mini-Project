@@ -89,7 +89,9 @@
     <Compile Include="Tests\WhenTheFossilServiceIsCalled_WithInvalidFossilName.cs" />
     <Compile Include="Tests\WhenTheFossilServiceIsCalled_WithValidFossilName.cs" />
     <Compile Include="AnimalCrossingIOService\SeaCreatureService.cs" />
+    <Compile Include="Tests\WhenTheSeaCreatureServiceIsCalled_WithInvalidSeaCreatureId.cs" />
     <Compile Include="Tests\WhenTheVillagerServiceIsCalled_WithInvalidVillagerId.cs" />
+    <Compile Include="Tests\WhenTheSeaCreatureServiceIsCalled_WithValidSeaCreatureId.cs" />
     <Compile Include="Tests\WhenTheVillagerServiceIsCalled_WithValidVillagerId.cs" />
   </ItemGroup>
   <ItemGroup>

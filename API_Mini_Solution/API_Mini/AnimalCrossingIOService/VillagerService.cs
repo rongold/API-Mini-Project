@@ -16,9 +16,9 @@ namespace API_Mini.AnimalCrossingIOService
             VillagerDTO = new DTO<VillagerResponse>();
         }
 
-        public async Task MakeRequestAsync(int villagerId)
+        public async Task MakeRequestAsync(string villagerId)
         {
-            VillagerResponse = await CallManager.MakeVillagerRequestAsync(villagerId);
+            VillagerResponse = await CallManager.MakeVillagerRequestAsync(int.Parse(villagerId));
             if (CallManager.StatusCode == 200)
             {
                 Json_response = JObject.Parse(VillagerResponse);

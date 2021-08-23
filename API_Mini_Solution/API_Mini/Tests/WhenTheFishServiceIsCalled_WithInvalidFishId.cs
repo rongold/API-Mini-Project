@@ -14,7 +14,7 @@ namespace API_Mini.Tests
 		public async Task OneTimeSetUpAsync()
 		{
 			_fishService = new FishService();
-			await _fishService.MakeRequestAsync(9999);
+			await _fishService.MakeRequestAsync("9999");
 		}
 
 		[Test]
