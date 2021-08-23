@@ -137,57 +137,53 @@ In this sprint, we manage to
 
 ### Sprint Retrospective
 
-##### Mood: /10
+##### Mood: 9/10
 
 
 
-##### Time Management: /3
+##### Time Management: 4/5
 
 
 
-#####  Work load: 2/3
+#####  Work load: 2/5
 
 
 
-##### Blockers: 1/3
+##### Blockers: 0/5
 
 
 
-##### Next Step
-
-
+------------------------
 
 ### Sprint Project Retrospective
 
-##### Mood: /10
+##### Mood: 8/10
 
 
 
-##### Time Management: 3/3
+##### Time Management: 4/5
 
 
 
-#####  Work load: 3/3
+#####  Work load: 3/5
 
 
 
-##### Blockers: 3/3
+##### Blockers: 1/5
 
 
 
-
-
-#### Application pages
-
-
-
-![UserPage](h)
+-------------------------------
 
 
 
 ### In Conclusion
 
-
+| What we learnt                 | What to do for next time                            |
+| ------------------------------ | --------------------------------------------------- |
+| How to collaborate with others | Test for the API Headers                            |
+| Effectively solve blockers     | Pick an API with POST (Maybe PUT or DELETE) as well |
+| Test APIs                      |                                                     |
 
 
 
