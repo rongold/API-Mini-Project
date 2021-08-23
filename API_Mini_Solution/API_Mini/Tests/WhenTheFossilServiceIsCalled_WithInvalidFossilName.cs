@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace API_Mini.Tests
 {
-	[Category("sad Path")]
+	[Category("Sad Path")]
 	public class WhenTheFossilServiceIsCalled_WithInvalidFossilName
 	{
 		FossilService _fossilService;
