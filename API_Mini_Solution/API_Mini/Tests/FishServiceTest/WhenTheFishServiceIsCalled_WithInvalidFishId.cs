@@ -34,5 +34,10 @@ namespace API_Mini.Tests
 		{
 			Assert.That(_fishService.FishDTO.Response, Is.Null);
 		}
+		[Test]
+		public void FishResponseMessageIsFishNotFound()
+		{
+			Assert.That(_fishService.FishResponse, Is.EqualTo("Fish not found"));
+		}
 	}
 }
