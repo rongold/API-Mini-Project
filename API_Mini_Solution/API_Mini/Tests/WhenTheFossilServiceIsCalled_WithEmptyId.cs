@@ -29,5 +29,11 @@ namespace API_Mini.Tests
 			Assert.That(_fossilService.Json_response["pachy_skull"], Is.Not.Null);
 			Assert.That(_fossilService.Json_response["pachy_tail"], Is.Not.Null);
 		}
+
+		[Test]
+		public void CountOfFossils_Is73()
+		{
+			Assert.That(_fossilService.Json_response.Count, Is.EqualTo(73));
+		}
 	}
 }
