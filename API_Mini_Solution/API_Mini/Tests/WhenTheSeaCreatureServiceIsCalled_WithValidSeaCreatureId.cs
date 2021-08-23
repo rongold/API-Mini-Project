@@ -25,9 +25,9 @@ namespace API_Mini.Tests
         [Test]
         public void CheckDetailsOfSeaCreatureMatchToExpected()
         {
-            Assert.That(_seaCreatureService.SeaCreatureDTO.Response.filename, Is.EqualTo("octopus"));
-            Assert.That(_seaCreatureService.SeaCreatureDTO.Response.price, Is.EqualTo(1200));
-            Assert.That(_seaCreatureService.SeaCreatureDTO.Response.image_uri, Is.EqualTo("https://acnhapi.com/v1/images/sea/20"));
+            Assert.That(_seaCreatureService.SeaCreatureDTO.Response.Filename, Is.EqualTo("octopus"));
+            Assert.That(_seaCreatureService.SeaCreatureDTO.Response.Price, Is.EqualTo(1200));
+            Assert.That(_seaCreatureService.SeaCreatureDTO.Response.Image_uri, Is.EqualTo("https://acnhapi.com/v1/images/sea/20"));
 
         }
 
