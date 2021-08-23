@@ -86,6 +86,7 @@
     <Compile Include="Tests\WhenTheBugServiceIsCalled_WithValidBugId.cs" />
     <Compile Include="Tests\WhenTheFishServiceIsCalled_WithInvalidFishId.cs" />
     <Compile Include="Tests\WhenTheFishServiceIsCalled_WithValidFishId.cs" />
+    <Compile Include="Tests\WhenTheFossilServiceIsCalled_WithEmptyId.cs" />
     <Compile Include="Tests\WhenTheFossilServiceIsCalled_WithInvalidFossilName.cs" />
     <Compile Include="Tests\WhenTheFossilServiceIsCalled_WithValidFossilName.cs" />
     <Compile Include="AnimalCrossingIOService\SeaCreatureService.cs" />
