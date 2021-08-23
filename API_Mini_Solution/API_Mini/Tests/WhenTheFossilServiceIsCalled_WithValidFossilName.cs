@@ -25,19 +25,19 @@ namespace API_Mini.Tests
 		[Test]
 		public void Name_USen_Is_myllokunmingia()
 		{
-			Assert.That(_fossilService.FossilDTO.Response.name.nameUSen, Is.EqualTo("myllokunmingia"));
+			Assert.That(_fossilService.FossilDTO.Response.Name.NameUSen, Is.EqualTo("myllokunmingia"));
 		}
 
 		[Test]
 		public void Price_Is_1500()
 		{
-			Assert.That(_fossilService.FossilDTO.Response.price, Is.EqualTo(1500));
+			Assert.That(_fossilService.FossilDTO.Response.Price, Is.EqualTo(1500));
 		}
 
 		[Test]
 		public void Part_Of_Is_myllokunmingia()
 		{
-			Assert.That(_fossilService.FossilDTO.Response.partof, Is.EqualTo("myllokunmingia"));
+			Assert.That(_fossilService.FossilDTO.Response.Partof, Is.EqualTo("myllokunmingia"));
 		}
 	}
 }

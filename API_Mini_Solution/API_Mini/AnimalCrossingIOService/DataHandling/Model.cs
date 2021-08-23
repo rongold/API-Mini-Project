@@ -10,198 +10,194 @@ namespace API_Mini.AnimalCrossingIOService.DataHandling
 
 	public class VillagerResponse : IResponse
 	{
-		public int id { get; set; }
-		[JsonProperty("file-name")]
-		public string filename { get; set; }
-		public Name name { get; set; }
-		public string personality { get; set; }
-		[JsonProperty("birthday-string")]
-		public string birthdaystring { get; set; }
-		public string birthday { get; set; }
-		public string species { get; set; }
-		public string gender { get; set; }
-		public string subtype { get; set; }
-		public string hobby { get; set; }
-		[JsonProperty("catch-phrase")]
-		public string catchphrase { get; set; }
-		public string icon_uri { get; set; }
-		public string image_uri { get; set; }
-		[JsonProperty("bubble-color")]
-		public string bubblecolor { get; set; }
-		[JsonProperty("text-color")]
-		public string textcolor { get; set; }
-		public string saying { get; set; }
-		[JsonProperty("catch-translations")]
-		public CatchTranslations catchtranslations { get; set; }
+		public int Id { get; set; }
+		public string Filename { get; set; }
+		public Name Name { get; set; }
+		public string Personality { get; set; }
+		[JsonProperty("Birthday-string")]
+		public string Birthdaystring { get; set; }
+		public string Birthday { get; set; }
+		public string Species { get; set; }
+		public string Gender { get; set; }
+		public string Subtype { get; set; }
+		public string Hobby { get; set; }
+		[JsonProperty("Catch-phrase")]
+		public string Catchphrase { get; set; }
+		public string Icon_uri { get; set; }
+		public string Image_uri { get; set; }
+		[JsonProperty("Bubble-color")]
+		public string Bubblecolor { get; set; }
+		[JsonProperty("Text-color")]
+		public string Textcolor { get; set; }
+		public string Saying { get; set; }
+		[JsonProperty("Catch-translations")]
+		public CatchTranslations Catchtranslations { get; set; }
 	}
 
 	public class Name
 	{
-		[JsonProperty("name-USen")]
-		public string nameUSen { get; set; }
-		[JsonProperty("name-EUen")]
-		public string nameEUen { get; set; }
-		[JsonProperty("name-EUde")]
-		public string nameEUde { get; set; }
-		[JsonProperty("name-EUes")]
-		public string nameEUes { get; set; }
-		[JsonProperty("name-USes")]
-		public string nameUSes { get; set; }
-		[JsonProperty("name-EUfr")]
-		public string nameEUfr { get; set; }
-		[JsonProperty("name-USfr")]
-		public string nameUSfr { get; set; }
-		[JsonProperty("name-EUit")]
-		public string nameEUit { get; set; }
-		[JsonProperty("name-EUnl")]
-		public string nameEUnl { get; set; }
-		[JsonProperty("name-CNzh")]
-		public string nameCNzh { get; set; }
-		[JsonProperty("name-TWzh")]
-		public string nameTWzh { get; set; }
-		[JsonProperty("name-JPja")]
-		public string nameJPja { get; set; }
-		[JsonProperty("name-KRko")]
-		public string nameKRko { get; set; }
-		[JsonProperty("name-EUru")]
-		public string nameEUru { get; set; }
+		[JsonProperty("Name-USen")]
+		public string NameUSen { get; set; }
+		[JsonProperty("Name-EUen")]
+		public string NameEUen { get; set; }
+		[JsonProperty("Name-EUde")]
+		public string NameEUde { get; set; }
+		[JsonProperty("Name-EUes")]
+		public string NameEUes { get; set; }
+		[JsonProperty("Name-USes")]
+		public string NameUSes { get; set; }
+		[JsonProperty("Name-EUfr")]
+		public string NameEUfr { get; set; }
+		[JsonProperty("Name-USfr")]
+		public string NameUSfr { get; set; }
+		[JsonProperty("Name-EUit")]
+		public string NameEUit { get; set; }
+		[JsonProperty("Name-EUnl")]
+		public string NameEUnl { get; set; }
+		[JsonProperty("Name-CNzh")]
+		public string NameCNzh { get; set; }
+		[JsonProperty("Name-TWzh")]
+		public string NameTWzh { get; set; }
+		[JsonProperty("Name-JPja")]
+		public string NameJPja { get; set; }
+		[JsonProperty("Name-KRko")]
+		public string NameKRko { get; set; }
+		[JsonProperty("Name-EUru")]
+		public string NameEUru { get; set; }
 	}
 
 	public class CatchTranslations
 	{
-		[JsonProperty("catch-USen")]
-		public string catchUSen { get; set; }
-		[JsonProperty("catch-EUen")]
-		public string catchEUen { get; set; }
-		[JsonProperty("catch-EUde")]
-		public string catchEUde { get; set; }
-		[JsonProperty("catch-EUes")]
-		public string catchEUes { get; set; }
-		[JsonProperty("catch-USes")]
-		public string catchUSes { get; set; }
-		[JsonProperty("catch-EUfr")]
-		public string catchEUfr { get; set; }
-		[JsonProperty("catch-USfr")]
-		public string catchUSfr { get; set; }
-		[JsonProperty("catch-EUit")]
-		public string catchEUit { get; set; }
-		[JsonProperty("catch-EUnl")]
-		public string catchEUnl { get; set; }
-		[JsonProperty("catch-CNzh")]
-		public string catchCNzh { get; set; }
-		[JsonProperty("catch-TWzh")]
-		public string catchTWzh { get; set; }
-		[JsonProperty("catch-JPja")]
-		public string catchJPja { get; set; }
-		[JsonProperty("catch-KRko")]
-		public string catchKRko { get; set; }
-		[JsonProperty("catch-EUru")]
-		public string catchEUru { get; set; }
+		[JsonProperty("Catch-USen")]
+		public string CatchUSen { get; set; }
+		[JsonProperty("Catch-EUen")]
+		public string CatchEUen { get; set; }
+		[JsonProperty("Catch-EUde")]
+		public string CatchEUde { get; set; }
+		[JsonProperty("Catch-EUes")]
+		public string CatchEUes { get; set; }
+		[JsonProperty("Catch-USes")]
+		public string CatchUSes { get; set; }
+		[JsonProperty("Catch-EUfr")]
+		public string CatchEUfr { get; set; }
+		[JsonProperty("Catch-USfr")]
+		public string CatchUSfr { get; set; }
+		[JsonProperty("Catch-EUit")]
+		public string CatchEUit { get; set; }
+		[JsonProperty("Catch-EUnl")]
+		public string CatchEUnl { get; set; }
+		[JsonProperty("Catch-CNzh")]
+		public string CatchCNzh { get; set; }
+		[JsonProperty("Catch-TWzh")]
+		public string CatchTWzh { get; set; }
+		[JsonProperty("Catch-JPja")]
+		public string CatchJPja { get; set; }
+		[JsonProperty("Catch-KRko")]
+		public string CatchKRko { get; set; }
+		[JsonProperty("Catch-EUru")]
+		public string CatchEUru { get; set; }
 	}
 
 	public class FishResponse : IResponse
 	{
-		public int id { get; set; }
-		[JsonProperty("file-name")]
-		public string filename { get; set; }
-		public Name name { get; set; }
-		public Availability availability { get; set; }
-		public string shadow { get; set; }
-		public int price { get; set; }
-		[JsonProperty("price-cj")]
-		public int pricecj { get; set; }
-		[JsonProperty("catch-phrase")]
-		public string catchphrase { get; set; }
-		[JsonProperty("museum-phrase")]
-		public string museumphrase { get; set; }
-		public string image_uri { get; set; }
-		public string icon_uri { get; set; }
+		public int Id { get; set; }
+		public string Filename { get; set; }
+		public Name Name { get; set; }
+		public Availability Availability { get; set; }
+		public string Shadow { get; set; }
+		public int Price { get; set; }
+		[JsonProperty("Price-cj")]
+		public int Pricecj { get; set; }
+		[JsonProperty("Catch-phrase")]
+		public string Catchphrase { get; set; }
+		[JsonProperty("Museum-phrase")]
+		public string Museumphrase { get; set; }
+		public string Image_uri { get; set; }
+		public string Icon_uri { get; set; }
 	}
 
 	public class Availability
 	{
-		[JsonProperty("month-northern")]
-		public string monthnorthern { get; set; }
-		[JsonProperty("month-southern")]
-		public string monthsouthern { get; set; }
-		public string time { get; set; }
-		public bool isAllDay { get; set; }
-		public bool isAllYear { get; set; }
-		public string location { get; set; }
-		public string rarity { get; set; }
-		[JsonProperty("month-array-northern")]
-		public int[] montharraynorthern { get; set; }
-		[JsonProperty("month-array-southern")]
-		public int[] montharraysouthern { get; set; }
-		[JsonProperty("time-array")]
-		public int[] timearray { get; set; }
+		[JsonProperty("Month-northern")]
+		public string Monthnorthern { get; set; }
+		[JsonProperty("Month-southern")]
+		public string Monthsouthern { get; set; }
+		public string Time { get; set; }
+		public bool IsAllDay { get; set; }
+		public bool IsAllYear { get; set; }
+		public string Location { get; set; }
+		public string Rarity { get; set; }
+		[JsonProperty("Month-array-northern")]
+		public int[] Montharraynorthern { get; set; }
+		[JsonProperty("Month-array-southern")]
+		public int[] Montharraysouthern { get; set; }
+		[JsonProperty("Time-array")]
+		public int[] Timearray { get; set; }
 	}
 
 
 	public class SeaCreaturesResponse : IResponse
 	{
-		public int id { get; set; }
-		[JsonProperty("file-name")]
-		public string filename { get; set; }
-		public Name name { get; set; }
-		public SeaCreatureAvailability availability { get; set; }
-		public string speed { get; set; }
-		public string shadow { get; set; }
-		public int price { get; set; }
-		[JsonProperty("catch-phrase")]
-		public string catchphrase { get; set; }
-		public string image_uri { get; set; }
-		public string icon_uri { get; set; }
-		[JsonProperty("museum-phrase")]
-		public string museumphrase { get; set; }
+		public int Id { get; set; }
+		public string Filename { get; set; }
+		public Name Name { get; set; }
+		public SeaCreatureAvailability Availability { get; set; }
+		public string Speed { get; set; }
+		public string Shadow { get; set; }
+		public int Price { get; set; }
+		[JsonProperty("Catch-phrase")]
+		public string Catchphrase { get; set; }
+		public string Image_uri { get; set; }
+		public string Icon_uri { get; set; }
+		[JsonProperty("Museum-phrase")]
+		public string Museumphrase { get; set; }
 	}
 
 	public class SeaCreatureAvailability
 	{
-		[JsonProperty("month-northern")]
-		public string monthnorthern { get; set; }
-		[JsonProperty("month-southern")]
-		public string monthsouthern { get; set; }
-		public string time { get; set; }
-		public bool isAllDay { get; set; }
-		public bool isAllYear { get; set; }
-		[JsonProperty("month-array-northern")]
-		public int[] montharraynorthern { get; set; }
-		[JsonProperty("month-array-southern")]
-		public int[] montharraysouthern { get; set; }
-		[JsonProperty("time-array")]
-		public int[] timearray { get; set; }
+		[JsonProperty("Month-northern")]
+		public string Monthnorthern { get; set; }
+		[JsonProperty("Month-southern")]
+		public string Monthsouthern { get; set; }
+		public string Time { get; set; }
+		public bool IsAllDay { get; set; }
+		public bool IsAllYear { get; set; }
+		[JsonProperty("Month-array-northern")]
+		public int[] Montharraynorthern { get; set; }
+		[JsonProperty("Month-array-southern")]
+		public int[] Montharraysouthern { get; set; }
+		[JsonProperty("Time-array")]
+		public int[] Timearray { get; set; }
 	}
 
 	public class BugsResponse : IResponse
 	{
-		public int id { get; set; }
-		[JsonProperty("file-name")]
-		public string filename { get; set; }
-		public Name name { get; set; }
-		public Availability availability { get; set; }
-		public int price { get; set; }
-		[JsonProperty("price-flick")]
-		public int priceflick { get; set; }
-		[JsonProperty("catch-phrase")]
-		public string catchphrase { get; set; }
-		[JsonProperty("museum-phrase")]
-		public string museumphrase { get; set; }
-		public string image_uri { get; set; }
-		public string icon_uri { get; set; }
+		public int Id { get; set; }
+		public string Filename { get; set; }
+		public Name Name { get; set; }
+		public Availability Availability { get; set; }
+		public int Price { get; set; }
+		[JsonProperty("Price-flick")]
+		public int Priceflick { get; set; }
+		[JsonProperty("Catch-phrase")]
+		public string Catchphrase { get; set; }
+		[JsonProperty("Museum-phrase")]
+		public string Museumphrase { get; set; }
+		public string Image_uri { get; set; }
+		public string Icon_uri { get; set; }
 	}
 
 
 	public class FossilsResponse : IResponse
 	{
-		public string filename { get; set; }
-		public Name name { get; set; }
-		public int price { get; set; }
-		[JsonProperty("museum-phrase")]
-		public string museumphrase { get; set; }
-		public string image_uri { get; set; }
-		[JsonProperty("part-of")]
-		public string partof { get; set; }
+		public string Filename { get; set; }
+		public Name Name { get; set; }
+		public int Price { get; set; }
+		[JsonProperty("Museum-phrase")]
+		public string Museumphrase { get; set; }
+		public string Image_uri { get; set; }
+		[JsonProperty("Part-of")]
+		public string Partof { get; set; }
 	}
 
 }
