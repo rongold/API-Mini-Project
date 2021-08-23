@@ -72,6 +72,6 @@ This Framework was built with Visual Studio 2019 and may operate differently acc
 
    Check all tests passed
 
-   ![](Images/Build.JPG)
+   ![](Images/Test.JPG)
 
    
