@@ -23,8 +23,17 @@ namespace API_Mini.AnimalCrossingIOService
             {
                 Json_response = JObject.Parse(VillagerResponse);
                 VillagerDTO.DeserializeReponse(VillagerResponse);
+            }            
+        }
+
+        public int VillagerCount()
+        {
+            var count = 0;
+            foreach (var villager in Json_response["id"])
+            {
+                count++;
             }
-            
+            return count;
         }
     }
 }
