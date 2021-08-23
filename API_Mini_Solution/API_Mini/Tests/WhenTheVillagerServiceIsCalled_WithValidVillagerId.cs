@@ -25,10 +25,10 @@ namespace API_Mini.Tests
         [Test]
         public void CheckDetailsOfVillagerMatchToExpected()
         {
-            Assert.That(_villagerService.VillagerDTO.Response.name.nameUSen, Is.EqualTo("Raymond"));
-            Assert.That(_villagerService.VillagerDTO.Response.personality, Is.EqualTo("Smug"));
-            Assert.That(_villagerService.VillagerDTO.Response.saying, Is.EqualTo("Stay on brand!"));
-            Assert.That(_villagerService.VillagerDTO.Response.birthdaystring, Is.EqualTo("October 1st"));
+            Assert.That(_villagerService.VillagerDTO.Response.Name.NameUSen, Is.EqualTo("Raymond"));
+            Assert.That(_villagerService.VillagerDTO.Response.Personality, Is.EqualTo("Smug"));
+            Assert.That(_villagerService.VillagerDTO.Response.Saying, Is.EqualTo("Stay on brand!"));
+            Assert.That(_villagerService.VillagerDTO.Response.Birthdaystring, Is.EqualTo("October 1st"));
 
         }
 
