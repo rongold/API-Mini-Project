@@ -94,31 +94,28 @@
     <Compile Include="AnimalCrossingIOService\VillagerService.cs" />
     <Compile Include="AppConfigReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AnimalCrossingIOService\SeaCreatureService.cs" />
+    <Compile Include="Tests\BugServiceTest\WhenTheBugServiceIsCalled_WithInvalidBugId.cs" />
+    <Compile Include="Tests\BugServiceTest\WhenTheBugServiceIsCalled_WithValidBugId.cs" />
+    <Compile Include="Tests\FishServiceTest\WhenTheFishServiceIsCalled_WithInvalidFishId.cs" />
+    <Compile Include="Tests\FishServiceTest\WhenTheFishServiceIsCalled_WithValidFishId.cs" />
+    <Compile Include="Tests\FossilService\WhenTheFossilServiceIsCalled_WithEmptyId.cs" />
+    <Compile Include="Tests\FossilService\WhenTheFossilServiceIsCalled_WithInvalidFossilName.cs" />
+    <Compile Include="Tests\FossilService\WhenTheFossilServiceIsCalled_WithValidFossilName.cs" />
+    <Compile Include="Tests\SeaCreatureTest\WhenTheSeaCreatureServiceIsCalled_WithInvalidSeaCreatureId.cs" />
+    <Compile Include="Tests\SeaCreatureTest\WhenTheSeaCreatureServiceIsCalled_WithValidSeaCreatureId.cs" />
+    <Compile Include="Tests\VillagerServiceTest\WhenTheVillagerServiceIsCalled_WithEmptyVillagerId.cs" />
+    <Compile Include="Tests\VillagerServiceTest\WhenTheVillagerServiceIsCalled_WithInvalidVillagerId.cs" />
+    <Compile Include="Tests\VillagerServiceTest\WhenTheVillagerServiceIsCalled_WithValidVillagerId.cs" />
     <Compile Include="Tests\WhenTheSeaCreatureServiceIsCalled_WithEmptySeaCreatureId.cs" />
     <Compile Include="Tests\WhenTheFishServiceIsCalled_WithEmptyFishId.cs" />
-    <Compile Include="Tests\WhenTheBugServiceIsCalled_WithInvalidBugId.cs" />
-    <Compile Include="Tests\WhenTheBugServiceIsCalled_WithValidBugId.cs" />
-    <Compile Include="Tests\WhenTheFishServiceIsCalled_WithInvalidFishId.cs" />
-    <Compile Include="Tests\WhenTheFishServiceIsCalled_WithValidFishId.cs" />
-    <Compile Include="Tests\WhenTheFossilServiceIsCalled_WithEmptyId.cs" />
-    <Compile Include="Tests\WhenTheFossilServiceIsCalled_WithInvalidFossilName.cs" />
-    <Compile Include="Tests\WhenTheFossilServiceIsCalled_WithValidFossilName.cs" />
     <Compile Include="AnimalCrossingIOService\SeaCreatureService.cs" />
-    <Compile Include="Tests\WhenTheSeaCreatureServiceIsCalled_WithInvalidSeaCreatureId.cs" />
     <Compile Include="Tests\WhenTheBugServiceIsCalled_WithEmptyBugId.cs" />
-    <Compile Include="Tests\WhenTheVillagerServiceIsCalled_WithInvalidVillagerId.cs" />
-    <Compile Include="Tests\WhenTheSeaCreatureServiceIsCalled_WithValidSeaCreatureId.cs" />
-    <Compile Include="Tests\WhenTheVillagerServiceIsCalled_WithEmptyVillagerId.cs" />
-    <Compile Include="Tests\WhenTheVillagerServiceIsCalled_WithValidVillagerId.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
