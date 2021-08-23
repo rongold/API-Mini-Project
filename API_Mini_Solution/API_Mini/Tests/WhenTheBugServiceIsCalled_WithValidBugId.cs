@@ -26,13 +26,13 @@ namespace API_Mini.Tests
 		[Test]
 		public void Name_USen_Is_paper_kite_butterfly()
 		{
-			Assert.That(_bugService.BugDTO.Response.name.nameUSen, Is.EqualTo("paper kite butterfly"));
+			Assert.That(_bugService.BugDTO.Response.Name.NameUSen, Is.EqualTo("paper kite butterfly"));
 		}
 
 		[Test]
 		public void Rarity_Is_Common()
 		{
-			Assert.That(_bugService.BugDTO.Response.availability.rarity, Is.EqualTo("Common"));
+			Assert.That(_bugService.BugDTO.Response.Availability.Rarity, Is.EqualTo("Common"));
 		}
 
 		
