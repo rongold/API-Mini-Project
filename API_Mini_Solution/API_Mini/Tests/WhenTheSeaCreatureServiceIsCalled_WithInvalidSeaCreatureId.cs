@@ -6,33 +6,33 @@ using System.Threading.Tasks;
 namespace API_Mini.Tests
 {
     [Category("Sad Path")]
-    public class WhenTheVillagerServiceIsCalled_WithInvalidVillagerId
+    public class WhenTheSeaCreatureServiceIsCalled_WithInvalidSeaCreatureId
     {
-        VillagerService _villagerService;
+        SeaCreatureService _seaCreatureService;
         [OneTimeSetUp]
         public async Task OneTimeSetupAsync()
         {
-            _villagerService = new VillagerService();
-            await _villagerService.MakeRequestAsync("9999");
+            _seaCreatureService = new SeaCreatureService();
+            await _seaCreatureService.MakeRequestAsync("9999");
         }
 
         [Test]
         public void StatusIs404()
         {
-            Assert.That(_villagerService.CallManager.StatusCode, Is.EqualTo(404));
+            Assert.That(_seaCreatureService.CallManager.StatusCode, Is.EqualTo(404));
             
         }
 
         [Test]
         public void JsonResponseIsNull()
         {
-            Assert.That(_villagerService.Json_response, Is.Null);
+            Assert.That(_seaCreatureService.Json_response, Is.Null);
         }
 
         [Test]
         public void VillagerResponseMessageIsVillagerNotFound()
         {
-            Assert.That(_villagerService.VillagerResponse, Is.EqualTo("Villager not found"));
+            Assert.That(_seaCreatureService.SeaCreatureResponse, Is.EqualTo("Sea Creature not found"));
         }
     }
 }

@@ -21,9 +21,9 @@ namespace API_Mini.AnimalCrossingIOService
 		}
 
 		//Method that defines and makes the API request and stores the responses
-		public async Task MakeRequestAsync(int FishId)
+		public async Task MakeRequestAsync(string FishId)
 		{
-			FishSelected = FishId;
+			FishSelected = int.Parse(FishId);
 			FishResponse = await CallManager.MakeFishRequestAsync(FishSelected);
 			if (CallManager.StatusCode == 200) 
 			{
