@@ -30,8 +30,6 @@ namespace API_Mini.Tests
             Assert.That(_villagerService.VillagerDTO.Response.Saying, Is.EqualTo("Stay on brand!"));
             Assert.That(_villagerService.VillagerDTO.Response.Birthdaystring, Is.EqualTo("October 1st"));
 
-        }
-
-        
+        }        
     }
 }
