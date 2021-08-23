@@ -28,7 +28,12 @@ namespace API_Mini.Tests
         {
             Assert.That(_seaCreatureService.Json_response, Is.Null);
         }
+        [Test]
+        public void DTO_Is_Null()
+        {
+            Assert.That(_seaCreatureService.SeaCreatureDTO.Response, Is.Null);
 
+        }
         [Test]
         public void VillagerResponseMessageIsVillagerNotFound()
         {

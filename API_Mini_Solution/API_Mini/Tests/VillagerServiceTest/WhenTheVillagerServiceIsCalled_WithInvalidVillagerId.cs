@@ -28,7 +28,12 @@ namespace API_Mini.Tests
         {
             Assert.That(_villagerService.Json_response, Is.Null);
         }
+        [Test]
+        public void DTO_Is_Null()
+        {
+            Assert.That(_villagerService.VillagerDTO.Response, Is.Null);
 
+        }
         [Test]
         public void VillagerResponseMessageIsVillagerNotFound()
         {
