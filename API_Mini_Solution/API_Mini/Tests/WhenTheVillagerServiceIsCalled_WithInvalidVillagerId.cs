@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace API_Mini.Tests
 {
+    [Category("Sad Path")]
     public class WhenTheVillagerServiceIsCalled_WithInvalidVillagerId
     {
         VillagerService _villagerService;
@@ -12,7 +13,7 @@ namespace API_Mini.Tests
         public async Task OneTimeSetupAsync()
         {
             _villagerService = new VillagerService();
-            await _villagerService.MakeRequestAsync(600);
+            await _villagerService.MakeRequestAsync(9999);
         }
 
         [Test]
