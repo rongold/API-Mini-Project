@@ -10,14 +10,19 @@
 - [Sprint 1](#sprint-1)
     + [Team](#team)
     + [Choosing API Framework to create](#choosing-api-framework-to-create)
-    + [Sprint Review](#sprint-review)
-    
-    * [Sprint Retrospective](#sprint-retrospective)
+    + [Kanban Board at the start](#kanban-board-at-the-start)
+    + [Kanban Board in the middle](#kanban-board-in-the-middle)
+    + [Kanban Board at the end](#kanban-board-at-the-end)
+    + [Sprint Achievement](#sprint-achievement)
+    + [Sprint Retrospective](#sprint-retrospective)
 - [Sprint 2](#sprint-2)
-    + [Sprint Review](#sprint-review-1)
+    + [Kanban Board at the start](#kanban-board-at-the-start-1)
+    + [Kanban Board at the end](#kanban-board-at-the-end-1)
+    + [Sprint Achievement](#sprint-achievement-1)
     
     * [Sprint Retrospective](#sprint-retrospective-1)
 - [Sprint Project Retrospective](#sprint-project-retrospective)
+  * [Application pages](#application-pages)
 - [In Conclusion](#in-conclusion)
 
 #### Project Description
@@ -94,33 +99,19 @@ Animal Crossing was chosen due to the respective admiration and nostalgic feelin
 
 ![End Sprint Kanban Board](Images/Sprint1_End.JPG)
 
-##### Sprint Review
+##### Sprint Achievement
 
 In this sprint, we manage to 
 
 - Set-up the GitHub collaboratively.
+- Set-up essential classes for API Framework
+  * Data Handling - DTO, IResponse, Model
+  * HTTP Manager - Service layer
+  * Tests - Happy path and Sad path
 
-### Sprint Retrospective
+##### Sprint Retrospective
 
-##### Mood: /10
-
-
-
-##### Time Management: /3
-
-
-
-#####  Work load: 2/3
-
-
-
-##### Blockers: 1/3
-
-
-
-##### Next Step
-
-
+![Sprint 1 Retro](Images/RetroSprint1.png)
 
 
 
@@ -136,9 +127,13 @@ In this sprint, we manage to
 
 ![End Sprint Kanban Board](h)
 
-##### Sprint Review
+##### Sprint Achievement
 
+In this sprint, we manage to 
 
+- Refactor the Model
+- Added more tests
+  * Tests - Happy path and Sad path
 
 ### Sprint Retrospective
 
