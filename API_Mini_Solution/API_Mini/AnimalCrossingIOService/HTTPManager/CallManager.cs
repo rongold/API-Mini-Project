@@ -28,6 +28,7 @@ namespace API_Mini.AnimalCrossingIOService
             return response.Content;
         }
 
+
         public async Task<string> MakeSeaCreatureRequestAsync(string seaCreatureId)
         {
             var request = new RestRequest();
