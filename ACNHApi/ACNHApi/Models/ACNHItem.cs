@@ -23,6 +23,7 @@ namespace ACNHApi.Models
 
 		public class Name
 		{
+			public int Id { get; set; }
 			public string NameUSen { get; set; }
 			public string NameEUen { get; set; }
 			public string NameEUde { get; set; }
@@ -41,6 +42,7 @@ namespace ACNHApi.Models
 
 		public class CatchTranslations
 		{
+			public int Id { get; set; }
 			public string CatchUSen { get; set; }
 			public string CatchEUen { get; set; }
 			public string CatchEUde { get; set; }
@@ -74,6 +76,7 @@ namespace ACNHApi.Models
 
 		public class Availability
 		{
+			public int Id { get; set; }
 			public string Monthnorthern { get; set; }
 			public string Monthsouthern { get; set; }
 			public string Time { get; set; }
@@ -104,6 +107,7 @@ namespace ACNHApi.Models
 
 		public class SeaCreatureAvailability
 		{
+			public int Id { get; set; }
 			public string Monthnorthern { get; set; }
 			public string Monthsouthern { get; set; }
 			public string Time { get; set; }
