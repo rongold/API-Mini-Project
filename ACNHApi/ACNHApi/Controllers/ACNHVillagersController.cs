@@ -24,7 +24,7 @@ namespace ACNHApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ACNHItemTDO>>> GetACNHItems()
         {
-            return await _context.ACNHItems
+            return await _context.ACNHVillagerItems
                 .Select(x => ACNHItemToDTO(x))
                 .ToListAsync();
         }
@@ -32,7 +32,7 @@ namespace ACNHApi.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ACNHItemTDO>> GetTodoItem(long id)
         {
-            var todoItem = await _context.ACNHItems.FindAsync(id);
+            var todoItem = await _context.ACNHVillagerItems.FindAsync(id);
 
             if (todoItem == null)
             {
@@ -50,7 +50,7 @@ namespace ACNHApi.Controllers
                 return BadRequest();
             }
 
-            var todoItem = await _context.ACNHItems.FindAsync(id);
+            var todoItem = await _context.ACNHVillagerItems.FindAsync(id);
             if (todoItem == null)
             {
                 return NotFound();
@@ -80,7 +80,7 @@ namespace ACNHApi.Controllers
                 Name = acnhItemDTO.Name
             };
 
-            _context.ACNHItems.Add(acnhItem);
+            _context.ACNHVillagerItems.Add(acnhItem);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(
@@ -92,21 +92,21 @@ namespace ACNHApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodoItem(long id)
         {
-            var todoItem = await _context.ACNHItems.FindAsync(id);
+            var todoItem = await _context.ACNHVillagerItems.FindAsync(id);
 
             if (todoItem == null)
             {
                 return NotFound();
             }
 
-            _context.ACNHItems.Remove(todoItem);
+            _context.ACNHVillagerItems.Remove(todoItem);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
         private bool TodoItemExists(long id) =>
-             _context.ACNHItems.Any(e => e.Id == id);
+             _context.ACNHVillagerItems.Any(e => e.Id == id);
 
         private static ACNHItemTDO ACNHItemToDTO(ACNHItem todoItem) =>
             new ACNHItemTDO

@@ -1,8 +1,5 @@
 namespace ACNHApi.Models
-{
-    public class ACNHItem
-    {
-		public class VillagerResponse
+{		public class VillagerResponse
 		{
 			public int Id { get; set; }
 			public string Filename { get; set; }
@@ -140,5 +137,4 @@ namespace ACNHApi.Models
 			public string Image_uri { get; set; }
 			public string Partof { get; set; }
 		}
-	}
 }
