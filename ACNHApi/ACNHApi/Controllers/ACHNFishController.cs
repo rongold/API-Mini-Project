@@ -107,6 +107,7 @@ namespace ACNHApi.Controllers
             {
                 Id = acnhItemDTO.Id,
                 Filename = acnhItemDTO.Filename,
+                //Name is Empty
                 Name = new Models.Name
                 {
                     NameUSen = acnhItemDTO.Name.NameUSen,
