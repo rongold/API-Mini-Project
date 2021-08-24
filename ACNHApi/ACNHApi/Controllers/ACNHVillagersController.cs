@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ACNHApi.Models;
+using Newtonsoft.Json;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace ACNHApi.Controllers
 {
@@ -33,10 +35,10 @@ namespace ACNHApi.Controllers
         public async Task<ActionResult<VillagerResponseTDO>> GetTodoItem(int id)
         {
             var villagerItem = await _context.VillagerItems.Include(i=>i.Name).Include(i=>i.Catchtranslations).Where(i=>i.Id==id).FirstOrDefaultAsync();
-
+            object response =  "Villager not found" ;
             if (villagerItem == null)
             {
-                return NotFound();
+                return NotFound(response.ToString());
             }
 
             return ACNHItemToDTO(villagerItem);
