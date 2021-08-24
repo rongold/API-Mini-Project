@@ -25,7 +25,7 @@ namespace API_Mini.Tests
         [Test]
         public void CheckTotalVillagersMatchToCount()
         {
-            Assert.That(_villagerService.Json_response.Count, Is.EqualTo(391));
+            Assert.That(_villagerService.Json_response.Count, Is.EqualTo(1));
 
         }
         [Test]
