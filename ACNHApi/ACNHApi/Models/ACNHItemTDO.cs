@@ -22,6 +22,7 @@
 
 	public class Name
 	{
+		public int Id { get; set; }
 		public string NameUSen { get; set; }
 		public string NameEUen { get; set; }
 		public string NameEUde { get; set; }
@@ -40,6 +41,7 @@
 
 	public class CatchTranslations
 	{
+		public int Id { get; set; }
 		public string CatchUSen { get; set; }
 		public string CatchEUen { get; set; }
 		public string CatchEUde { get; set; }
@@ -73,6 +75,7 @@
 
 	public class Availability
 	{
+		public int Id { get; set; }
 		public string Monthnorthern { get; set; }
 		public string Monthsouthern { get; set; }
 		public string Time { get; set; }
@@ -103,6 +106,7 @@
 
 	public class SeaCreatureAvailability
 	{
+		public int Id { get; set; }
 		public string Monthnorthern { get; set; }
 		public string Monthsouthern { get; set; }
 		public string Time { get; set; }

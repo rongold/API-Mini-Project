@@ -30,7 +30,7 @@ namespace ACNHApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<VillagerResponseTDO>> GetTodoItem(long id)
+        public async Task<ActionResult<VillagerResponseTDO>> GetTodoItem(int id)
         {
             var todoItem = await _context.VillagerItems.FindAsync(id);
 
@@ -43,7 +43,7 @@ namespace ACNHApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTodoItem(long id, VillagerResponseTDO acnhItemDTO)
+        public async Task<IActionResult> UpdateTodoItem(int id, VillagerResponseTDO acnhItemDTO)
         {
             if (id != acnhItemDTO.Id)
             {
@@ -86,6 +86,23 @@ namespace ACNHApi.Controllers
             todoItem.Bubblecolor = acnhItemDTO.Bubblecolor;
             todoItem.Textcolor = acnhItemDTO.Textcolor;
             todoItem.Saying = acnhItemDTO.Saying;
+            todoItem.Catchtranslations = new Models.CatchTranslations
+            {
+                CatchUSen = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchEUen = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchEUde = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchEUes = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchUSes = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchEUfr = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchUSfr = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchEUit = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchEUnl = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchCNzh = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchTWzh = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchJPja = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchKRko = acnhItemDTO.Catchtranslations.CatchUSen,
+                CatchEUru = acnhItemDTO.Catchtranslations.CatchUSen
+            };
 
             try
             {
@@ -133,7 +150,24 @@ namespace ACNHApi.Controllers
                 Image_uri = acnhVillagerDTO.Image_uri,
                 Bubblecolor = acnhVillagerDTO.Bubblecolor,
                 Textcolor = acnhVillagerDTO.Textcolor,
-                Saying = acnhVillagerDTO.Saying
+                Saying = acnhVillagerDTO.Saying,
+                Catchtranslations = new Models.CatchTranslations
+                {
+                    CatchUSen = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchEUen = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchEUde = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchEUes = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchUSes = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchEUfr = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchUSfr = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchEUit = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchEUnl = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchCNzh = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchTWzh = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchJPja = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchKRko = acnhVillagerDTO.Catchtranslations.CatchUSen,
+                    CatchEUru = acnhVillagerDTO.Catchtranslations.CatchUSen
+                }
             };
 
             _context.VillagerItems.Add(villagerItem);
@@ -146,7 +180,7 @@ namespace ACNHApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTodoItem(long id)
+        public async Task<IActionResult> DeleteTodoItem(int id)
         {
             var todoItem = await _context.VillagerItems.FindAsync(id);
 
@@ -197,7 +231,24 @@ namespace ACNHApi.Controllers
                 Image_uri = villagerItem.Image_uri,
                 Bubblecolor = villagerItem.Bubblecolor,
                 Textcolor = villagerItem.Textcolor,
-                Saying = villagerItem.Saying
+                Saying = villagerItem.Saying,
+                Catchtranslations = new CatchTranslations
+                {
+                    CatchUSen = villagerItem.Catchtranslations.CatchUSen,
+                    CatchEUen = villagerItem.Catchtranslations.CatchUSen,
+                    CatchEUde = villagerItem.Catchtranslations.CatchUSen,
+                    CatchEUes = villagerItem.Catchtranslations.CatchUSen,
+                    CatchUSes = villagerItem.Catchtranslations.CatchUSen,
+                    CatchEUfr = villagerItem.Catchtranslations.CatchUSen,
+                    CatchUSfr = villagerItem.Catchtranslations.CatchUSen,
+                    CatchEUit = villagerItem.Catchtranslations.CatchUSen,
+                    CatchEUnl = villagerItem.Catchtranslations.CatchUSen,
+                    CatchCNzh = villagerItem.Catchtranslations.CatchUSen,
+                    CatchTWzh = villagerItem.Catchtranslations.CatchUSen,
+                    CatchJPja = villagerItem.Catchtranslations.CatchUSen,
+                    CatchKRko = villagerItem.Catchtranslations.CatchUSen,
+                    CatchEUru = villagerItem.Catchtranslations.CatchUSen
+                }
             };
     }
 }
