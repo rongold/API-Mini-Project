@@ -32,7 +32,7 @@ namespace ACNHApi.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<VillagerResponseTDO>> GetTodoItem(int id)
         {
-            var todoItem = await _context.VillagerItems.Where(i=>i.Id==id).FirstOrDefaultAsync();
+            var todoItem = await _context.VillagerItems.Include(i=>i.Name).Include(i=>i.Catchtranslations).Where(i=>i.Id==id).FirstOrDefaultAsync();
 
             if (todoItem == null)
             {
@@ -63,18 +63,10 @@ namespace ACNHApi.Controllers
                 NameEUen = acnhItemDTO.Name.NameEUen,
                 NameEUde = acnhItemDTO.Name.NameEUde,
                 NameEUes = acnhItemDTO.Name.NameEUes,
-                //NameUSes = acnhItemDTO.Name.NameUSes,
-                //NameEUfr = acnhItemDTO.Name.NameEUfr,
-                //NameUSfr = acnhItemDTO.Name.NameUSfr,
-                //NameEUit = acnhItemDTO.Name.NameEUit,
-                //NameEUnl = acnhItemDTO.Name.NameEUnl,
-                //NameCNzh = acnhItemDTO.Name.NameCNzh,
-                //NameTWzh = acnhItemDTO.Name.NameTWzh,
-                //NameJPja = acnhItemDTO.Name.NameJPja,
-                //NameKRko = acnhItemDTO.Name.NameKRko,
-                //NameEUru = acnhItemDTO.Name.NameEUru
+                
             };
             todoItem.Personality = acnhItemDTO.Personality;
+            todoItem.Birthday = acnhItemDTO.Birthday;
             todoItem.Birthdaystring = acnhItemDTO.Birthdaystring;
             todoItem.Species = acnhItemDTO.Species;
             todoItem.Gender = acnhItemDTO.Gender;
@@ -92,16 +84,7 @@ namespace ACNHApi.Controllers
                 CatchEUen = acnhItemDTO.Catchtranslations.CatchUSen,
                 CatchEUde = acnhItemDTO.Catchtranslations.CatchUSen,
                 CatchEUes = acnhItemDTO.Catchtranslations.CatchUSen,
-                //CatchUSes = acnhItemDTO.Catchtranslations.CatchUSen,
-                //CatchEUfr = acnhItemDTO.Catchtranslations.CatchUSen,
-                //CatchUSfr = acnhItemDTO.Catchtranslations.CatchUSen,
-                //CatchEUit = acnhItemDTO.Catchtranslations.CatchUSen,
-                //CatchEUnl = acnhItemDTO.Catchtranslations.CatchUSen,
-                //CatchCNzh = acnhItemDTO.Catchtranslations.CatchUSen,
-                //CatchTWzh = acnhItemDTO.Catchtranslations.CatchUSen,
-                //CatchJPja = acnhItemDTO.Catchtranslations.CatchUSen,
-                //CatchKRko = acnhItemDTO.Catchtranslations.CatchUSen,
-                //CatchEUru = acnhItemDTO.Catchtranslations.CatchUSen
+                
             };
 
             try
@@ -128,18 +111,10 @@ namespace ACNHApi.Controllers
                     NameEUen = acnhVillagerDTO.Name.NameEUen,
                     NameEUde = acnhVillagerDTO.Name.NameEUde,
                     NameEUes = acnhVillagerDTO.Name.NameEUes,
-                    //NameUSes = acnhVillagerDTO.Name.NameUSes,
-                    //NameEUfr = acnhVillagerDTO.Name.NameEUfr,
-                    //NameUSfr = acnhVillagerDTO.Name.NameUSfr,
-                    //NameEUit = acnhVillagerDTO.Name.NameEUit,
-                    //NameEUnl = acnhVillagerDTO.Name.NameEUnl,
-                    //NameCNzh = acnhVillagerDTO.Name.NameCNzh,
-                    //NameTWzh = acnhVillagerDTO.Name.NameTWzh,
-                    //NameJPja = acnhVillagerDTO.Name.NameJPja,
-                    //NameKRko = acnhVillagerDTO.Name.NameKRko,
-                    //NameEUru = acnhVillagerDTO.Name.NameEUru
+                    
                 },
                 Personality = acnhVillagerDTO.Personality,
+                Birthday = acnhVillagerDTO.Birthday,
                 Birthdaystring = acnhVillagerDTO.Birthdaystring,
                 Species = acnhVillagerDTO.Species,
                 Gender = acnhVillagerDTO.Gender,
@@ -157,16 +132,7 @@ namespace ACNHApi.Controllers
                     CatchEUen = acnhVillagerDTO.Catchtranslations.CatchUSen,
                     CatchEUde = acnhVillagerDTO.Catchtranslations.CatchUSen,
                     CatchEUes = acnhVillagerDTO.Catchtranslations.CatchUSen,
-                    //CatchUSes = acnhVillagerDTO.Catchtranslations.CatchUSen,
-                    //CatchEUfr = acnhVillagerDTO.Catchtranslations.CatchUSen,
-                    //CatchUSfr = acnhVillagerDTO.Catchtranslations.CatchUSen,
-                    //CatchEUit = acnhVillagerDTO.Catchtranslations.CatchUSen,
-                    //CatchEUnl = acnhVillagerDTO.Catchtranslations.CatchUSen,
-                    //CatchCNzh = acnhVillagerDTO.Catchtranslations.CatchUSen,
-                    //CatchTWzh = acnhVillagerDTO.Catchtranslations.CatchUSen,
-                    //CatchJPja = acnhVillagerDTO.Catchtranslations.CatchUSen,
-                    //CatchKRko = acnhVillagerDTO.Catchtranslations.CatchUSen,
-                    //CatchEUru = acnhVillagerDTO.Catchtranslations.CatchUSen
+                    
                 }
             };
 
@@ -209,18 +175,10 @@ namespace ACNHApi.Controllers
                     NameEUen = villagerItem.Name.NameEUen,
                     NameEUde = villagerItem.Name.NameEUde,
                     NameEUes = villagerItem.Name.NameEUes
-                    //NameUSes = villagerItem.Name.NameUSes,
-                    //NameEUfr = villagerItem.Name.NameEUfr,
-                    //NameUSfr = villagerItem.Name.NameUSfr,
-                    //NameEUit = villagerItem.Name.NameEUit,
-                    //NameEUnl = villagerItem.Name.NameEUnl,
-                    //NameCNzh = villagerItem.Name.NameCNzh,
-                    //NameTWzh = villagerItem.Name.NameTWzh,
-                    //NameJPja = villagerItem.Name.NameJPja,
-                    //NameKRko = villagerItem.Name.NameKRko,
-                    //NameEUru = villagerItem.Name.NameEUru
+                    
                 },
                 Personality = villagerItem.Personality,
+                Birthday = villagerItem.Birthday,
                 Birthdaystring = villagerItem.Birthdaystring,
                 Species = villagerItem.Species,
                 Gender = villagerItem.Gender,
@@ -238,16 +196,7 @@ namespace ACNHApi.Controllers
                     CatchEUen = villagerItem.Catchtranslations.CatchEUen,
                     CatchEUde = villagerItem.Catchtranslations.CatchEUde,
                     CatchEUes = villagerItem.Catchtranslations.CatchEUes
-                    //CatchUSes = villagerItem.Catchtranslations.CatchUSen,
-                    //CatchEUfr = villagerItem.Catchtranslations.CatchUSen,
-                    //CatchUSfr = villagerItem.Catchtranslations.CatchUSen,
-                    //CatchEUit = villagerItem.Catchtranslations.CatchUSen,
-                    //CatchEUnl = villagerItem.Catchtranslations.CatchUSen,
-                    //CatchCNzh = villagerItem.Catchtranslations.CatchUSen,
-                    //CatchTWzh = villagerItem.Catchtranslations.CatchUSen,
-                    //CatchJPja = villagerItem.Catchtranslations.CatchUSen,
-                    //CatchKRko = villagerItem.Catchtranslations.CatchUSen,
-                    //CatchEUru = villagerItem.Catchtranslations.CatchUSen
+                    
                 }
             };
     }
