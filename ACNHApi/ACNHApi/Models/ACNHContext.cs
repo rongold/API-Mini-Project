@@ -10,5 +10,6 @@ namespace ACNHApi.Models
         }
 
         public DbSet<VillagerResponse> VillagerItems { get; set; }
+        public DbSet<FishResponse> FishItems { get; set; }
     }
 }

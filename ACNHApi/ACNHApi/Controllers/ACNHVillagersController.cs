@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using ACNHApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ACNHApi.Models;
-using Newtonsoft.Json;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace ACNHApi.Controllers
 {
-    [Route("api/ACNHVillagers")]
+	[Route("api/ACNHVillagers")]
     [ApiController]
     public class ACNHVillagersController : ControllerBase
     {
@@ -22,17 +18,17 @@ namespace ACNHApi.Controllers
             _context = context;
         }
 
-        // GET: api/TodoItems
+        // GET: api/VillagerItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<VillagerResponseTDO>>> GetACNHItems()
+        public async Task<ActionResult<IEnumerable<VillagerResponseTDO>>> GetVillagerItems()
         {
             return await _context.VillagerItems.Include(i=>i.Name).Include(i=>i.Catchtranslations)
-                .Select(x => ACNHItemToDTO(x))
+                .Select(x => VillagerItemToDTO(x))
                 .ToListAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<VillagerResponseTDO>> GetTodoItem(int id)
+        public async Task<ActionResult<VillagerResponseTDO>> GetVillagerItem(int id)
         {
             var villagerItem = await _context.VillagerItems.Include(i=>i.Name).Include(i=>i.Catchtranslations).Where(i=>i.Id==id).FirstOrDefaultAsync();
             object response =  "Villager not found" ;
@@ -41,11 +37,11 @@ namespace ACNHApi.Controllers
                 return NotFound(response.ToString());
             }
 
-            return ACNHItemToDTO(villagerItem);
+            return VillagerItemToDTO(villagerItem);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTodoItem(int id, VillagerResponseTDO acnhItemDTO)
+        public async Task<IActionResult> UpdateVillagerItem(int id, VillagerResponseTDO acnhItemDTO)
         {
             if (id != acnhItemDTO.Id)
             {
@@ -102,7 +98,7 @@ namespace ACNHApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<VillagerResponseTDO>> CreateTodoItem(VillagerResponseTDO acnhVillagerDTO)
+        public async Task<ActionResult<VillagerResponseTDO>> CreateVillagerItem(VillagerResponseTDO acnhVillagerDTO)
         {
             var villagerItem = new VillagerResponse
             {
@@ -143,13 +139,13 @@ namespace ACNHApi.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(
-                nameof(GetTodoItem),
+                nameof(GetVillagerItem),
                 new { id = villagerItem.Id },
-                ACNHItemToDTO(villagerItem));
+                VillagerItemToDTO(villagerItem));
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTodoItem(int id)
+        public async Task<IActionResult> DeleteVillagerItem(int id)
         {
             var villagerItem = await _context.VillagerItems.Include(i => i.Name).Include(i => i.Catchtranslations).Where(i => i.Id == id).FirstOrDefaultAsync();
 
@@ -167,7 +163,7 @@ namespace ACNHApi.Controllers
         private bool VillagerItemExists(long id) =>
              _context.VillagerItems.Any(e => e.Id == id);
 
-        private static VillagerResponseTDO ACNHItemToDTO(VillagerResponse villagerItem) =>
+        private static VillagerResponseTDO VillagerItemToDTO(VillagerResponse villagerItem) =>
             new VillagerResponseTDO
             {
                 Id = villagerItem.Id,
