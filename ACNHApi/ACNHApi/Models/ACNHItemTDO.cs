@@ -1,6 +1,5 @@
-public class ACNHItemTDO
-{
-	public class VillagerResponse
+
+	public class VillagerResponseTDO
 	{
 		public int Id { get; set; }
 		public string Filename { get; set; }
@@ -57,7 +56,7 @@ public class ACNHItemTDO
 		public string CatchEUru { get; set; }
 	}
 
-	public class FishResponse 
+	public class FishResponseTDO
 	{
 		public int Id { get; set; }
 		public string Filename { get; set; }
@@ -87,7 +86,7 @@ public class ACNHItemTDO
 	}
 
 
-	public class SeaCreaturesResponse 
+	public class SeaCreaturesResponseTDO 
 	{
 		public int Id { get; set; }
 		public string Filename { get; set; }
@@ -114,7 +113,7 @@ public class ACNHItemTDO
 		public int[] Timearray { get; set; }
 	}
 
-	public class BugsResponse 
+	public class BugsResponseTDO 
 	{
 		public int Id { get; set; }
 		public string Filename { get; set; }
@@ -129,7 +128,7 @@ public class ACNHItemTDO
 	}
 
 
-	public class FossilsResponse 
+	public class FossilsResponseTDO
 	{
 		public string Filename { get; set; }
 		public Name Name { get; set; }
@@ -138,4 +137,3 @@ public class ACNHItemTDO
 		public string Image_uri { get; set; }
 		public string Partof { get; set; }
 	}
-}

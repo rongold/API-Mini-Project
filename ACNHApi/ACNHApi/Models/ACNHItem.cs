@@ -1,5 +1,6 @@
 namespace ACNHApi.Models
-{		public class VillagerResponse
+{
+		public class VillagerResponse
 		{
 			public int Id { get; set; }
 			public string Filename { get; set; }

@@ -9,8 +9,7 @@ namespace ACNHApi.Models
         {
         }
 
-        public DbSet<VillagerResponse> ACNHVillagerItems { get; set; }
-        public DbSet<FishResponse> ACNHFishItems { get; set; }
-
+        public DbSet<VillagerResponse> VillagerItems { get; set; }
+        public DbSet<FishResponse> FishItems { get; set; }
     }
 }
