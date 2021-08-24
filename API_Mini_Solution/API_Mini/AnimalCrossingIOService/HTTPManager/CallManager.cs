@@ -22,11 +22,12 @@ namespace API_Mini.AnimalCrossingIOService
         {
             var request = new RestRequest();
             request.AddHeader("Content-Type", "application/json");
-            request.Resource = $"villagers/{villagerId}";
+            request.Resource = $"{villagerId}";
             var response = await _client.ExecuteAsync(request);
             StatusCode = (int)response.StatusCode;
             return response.Content;
         }
+
 
         public async Task<string> MakeSeaCreatureRequestAsync(string seaCreatureId)
         {

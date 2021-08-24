@@ -37,7 +37,7 @@ namespace API_Mini.Tests
         [Test]
         public void VillagerResponseMessageIsVillagerNotFound()
         {
-            Assert.That(_villagerService.VillagerResponse, Is.EqualTo("Villager not found"));
+            Assert.That(_villagerService.VillagerResponse, Does.Contain("Villager not found"));
         }
     }
 }
