@@ -38,7 +38,7 @@ namespace API_Mini.Tests
 		[Test]
 		public void BugResponseMessageIsBugNotFound()
 		{
-			Assert.That(_bugService.BugResponse, Is.EqualTo("Bug not found"));
+			Assert.That(_bugService.BugResponse, Does.Contain("Bug not found"));
 		}
 	}
 }

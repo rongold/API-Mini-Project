@@ -22,7 +22,7 @@ namespace API_Mini.AnimalCrossingIOService
         {
             var request = new RestRequest();
             request.AddHeader("Content-Type", "application/json");
-            request.Resource = $"{villagerId}";
+            request.Resource = $"ACNHVillagers/{villagerId}";
             var response = await _client.ExecuteAsync(request);
             StatusCode = (int)response.StatusCode;
             return response.Content;
@@ -43,7 +43,7 @@ namespace API_Mini.AnimalCrossingIOService
         {
             var request = new RestRequest();
             request.AddHeader("Content-Type", "application/json");
-            request.Resource = $"fish/{fishId}";
+            request.Resource = $"ACNHFish/{fishId}";
             var response = await _client.ExecuteAsync(request);
             StatusCode = (int)response.StatusCode;
             return response.Content;
@@ -53,7 +53,7 @@ namespace API_Mini.AnimalCrossingIOService
         {
             var request = new RestRequest();
             request.AddHeader("Content-Type", "application/json");
-            request.Resource = $"bugs/{bugId}";
+            request.Resource = $"ACNHBugs/{bugId}";
             var response = await _client.ExecuteAsync(request);
             StatusCode = (int)response.StatusCode;
             return response.Content;
