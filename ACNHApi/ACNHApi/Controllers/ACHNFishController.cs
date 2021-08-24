@@ -22,17 +22,17 @@ namespace ACNHApi.Controllers
 
         // GET: api/TodoItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ACNHItemTDO.FishResponse>>> GetACNHFishItems()
+        public async Task<ActionResult<IEnumerable<FishResponseTDO>>> GetACNHFishItems()
         {
-            return await _context.ACNHFishItems
+            return await _context.FishItems
                 .Select(x => ACNHItemToDTO(x))
                 .ToListAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<ACNHItemTDO.FishResponse>> GetFishItem(long id)
+        public async Task<ActionResult<FishResponseTDO>> GetFishItem(long id)
         {
-            var todoItem = await _context.ACNHFishItems.FindAsync(id);
+            var todoItem = await _context.FishItems.FindAsync(id);
 
             if (todoItem == null)
             {
@@ -43,14 +43,14 @@ namespace ACNHApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateFishItem(long id, ACNHItemTDO.FishResponse acnhItemDTO)
+        public async Task<IActionResult> UpdateFishItem(long id, FishResponseTDO acnhItemDTO)
         {
             if (id != acnhItemDTO.Id)
             {
                 return BadRequest();
             }
 
-            var todoItem = await _context.ACNHFishItems.FindAsync(id);
+            var todoItem = await _context.FishItems.FindAsync(id);
             if (todoItem == null)
             {
                 return NotFound();
@@ -72,14 +72,14 @@ namespace ACNHApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ACNHItemTDO.FishResponse>> CreateFishItem(ACNHItemTDO.FishResponse acnhItemDTO)
+        public async Task<ActionResult<FishResponseTDO>> CreateFishItem(FishResponseTDO acnhItemDTO)
         {
             var acnhItem = new FishResponse
             {
                 Id = acnhItemDTO.Id,
                 Filename = acnhItemDTO.Filename,
                 //Name = fishItem.Name,
-                Availability = new Availability()
+                Availability = new Models.Availability()
                 {
                     Monthnorthern = acnhItemDTO.Availability.Monthnorthern,
                     Monthsouthern = acnhItemDTO.Availability.Monthsouthern,
@@ -102,7 +102,7 @@ namespace ACNHApi.Controllers
 
             };
 
-            _context.ACNHFishItems.Add(acnhItem);
+            _context.FishItems.Add(acnhItem);
             await _context.SaveChangesAsync();
 
             //Needs to be refactored
@@ -115,29 +115,45 @@ namespace ACNHApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFishItem(long id)
         {
-            var fishItem = await _context.ACNHFishItems.FindAsync(id);
+            var fishItem = await _context.FishItems.FindAsync(id);
 
             if (fishItem == null)
             {
                 return NotFound();
             }
 
-            _context.ACNHFishItems.Remove(fishItem);
+            _context.FishItems.Remove(fishItem);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
         private bool FishItemExists(long id) =>
-             _context.ACNHFishItems.Any(e => e.Id == id);
+             _context.FishItems.Any(e => e.Id == id);
 
-        private static ACNHItemTDO.FishResponse ACNHItemToDTO(FishResponse fishItem) =>
-            new ACNHItemTDO.FishResponse
+        private static FishResponseTDO ACNHItemToDTO(FishResponse fishItem) =>
+            new FishResponseTDO
             {
                 Id = fishItem.Id,
                 Filename = fishItem.Filename,
-                //Name = fishItem.Name,
-                Availability = new ACNHItemTDO.Availability()
+                Name = new Name
+                {
+                    NameUSen = fishItem.Name.NameUSen,
+                    NameEUen = fishItem.Name.NameEUen,
+                    NameEUde = fishItem.Name.NameEUde,
+                    NameEUes = fishItem.Name.NameEUes,
+                    NameUSes = fishItem.Name.NameUSes,
+                    NameEUfr = fishItem.Name.NameEUfr,
+                    NameUSfr = fishItem.Name.NameUSfr,
+                    NameEUit = fishItem.Name.NameEUit,
+                    NameEUnl = fishItem.Name.NameEUnl,
+                    NameCNzh = fishItem.Name.NameCNzh,
+                    NameTWzh = fishItem.Name.NameTWzh,
+                    NameJPja = fishItem.Name.NameJPja,
+                    NameKRko = fishItem.Name.NameKRko,
+                    NameEUru = fishItem.Name.NameEUru
+                },
+                Availability = Availability()
                 {
                     Monthnorthern = fishItem.Availability.Monthnorthern,
                     Monthsouthern = fishItem.Availability.Monthsouthern,
