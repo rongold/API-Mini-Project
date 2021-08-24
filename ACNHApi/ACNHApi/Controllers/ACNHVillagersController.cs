@@ -24,7 +24,7 @@ namespace ACNHApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<VillagerResponseTDO>>> GetACNHItems()
         {
-            return await _context.VillagerItems
+            return await _context.VillagerItems.Include(i=>i.Name).Include(i=>i.Catchtranslations)
                 .Select(x => ACNHItemToDTO(x))
                 .ToListAsync();
         }
@@ -32,14 +32,14 @@ namespace ACNHApi.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<VillagerResponseTDO>> GetTodoItem(int id)
         {
-            var todoItem = await _context.VillagerItems.Include(i=>i.Name).Include(i=>i.Catchtranslations).Where(i=>i.Id==id).FirstOrDefaultAsync();
+            var villagerItem = await _context.VillagerItems.Include(i=>i.Name).Include(i=>i.Catchtranslations).Where(i=>i.Id==id).FirstOrDefaultAsync();
 
-            if (todoItem == null)
+            if (villagerItem == null)
             {
                 return NotFound();
             }
 
-            return ACNHItemToDTO(todoItem);
+            return ACNHItemToDTO(villagerItem);
         }
 
         [HttpPut("{id}")]
@@ -50,14 +50,14 @@ namespace ACNHApi.Controllers
                 return BadRequest();
             }
 
-            var todoItem = await _context.VillagerItems.FindAsync(id);
-            if (todoItem == null)
+            var villagerItem = await _context.VillagerItems.Include(i => i.Name).Include(i => i.Catchtranslations).Where(i => i.Id == id).FirstOrDefaultAsync();
+            if (villagerItem == null)
             {
                 return NotFound();
             }
 
-            todoItem.Filename = acnhItemDTO.Filename;
-            todoItem.Name = new Models.Name
+            villagerItem.Filename = acnhItemDTO.Filename;
+            villagerItem.Name = new Models.Name
             {
                 NameUSen = acnhItemDTO.Name.NameUSen,
                 NameEUen = acnhItemDTO.Name.NameEUen,
@@ -65,20 +65,20 @@ namespace ACNHApi.Controllers
                 NameEUes = acnhItemDTO.Name.NameEUes,
                 
             };
-            todoItem.Personality = acnhItemDTO.Personality;
-            todoItem.Birthday = acnhItemDTO.Birthday;
-            todoItem.Birthdaystring = acnhItemDTO.Birthdaystring;
-            todoItem.Species = acnhItemDTO.Species;
-            todoItem.Gender = acnhItemDTO.Gender;
-            todoItem.Subtype = acnhItemDTO.Subtype;
-            todoItem.Hobby = acnhItemDTO.Hobby;
-            todoItem.Catchphrase = acnhItemDTO.Catchphrase;
-            todoItem.Icon_uri = acnhItemDTO.Icon_uri;
-            todoItem.Image_uri = acnhItemDTO.Image_uri;
-            todoItem.Bubblecolor = acnhItemDTO.Bubblecolor;
-            todoItem.Textcolor = acnhItemDTO.Textcolor;
-            todoItem.Saying = acnhItemDTO.Saying;
-            todoItem.Catchtranslations = new Models.CatchTranslations
+            villagerItem.Personality = acnhItemDTO.Personality;
+            villagerItem.Birthday = acnhItemDTO.Birthday;
+            villagerItem.Birthdaystring = acnhItemDTO.Birthdaystring;
+            villagerItem.Species = acnhItemDTO.Species;
+            villagerItem.Gender = acnhItemDTO.Gender;
+            villagerItem.Subtype = acnhItemDTO.Subtype;
+            villagerItem.Hobby = acnhItemDTO.Hobby;
+            villagerItem.Catchphrase = acnhItemDTO.Catchphrase;
+            villagerItem.Icon_uri = acnhItemDTO.Icon_uri;
+            villagerItem.Image_uri = acnhItemDTO.Image_uri;
+            villagerItem.Bubblecolor = acnhItemDTO.Bubblecolor;
+            villagerItem.Textcolor = acnhItemDTO.Textcolor;
+            villagerItem.Saying = acnhItemDTO.Saying;
+            villagerItem.Catchtranslations = new Models.CatchTranslations
             {
                 CatchUSen = acnhItemDTO.Catchtranslations.CatchUSen,
                 CatchEUen = acnhItemDTO.Catchtranslations.CatchUSen,
@@ -91,7 +91,7 @@ namespace ACNHApi.Controllers
             {
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException) when (!TodoItemExists(id))
+            catch (DbUpdateConcurrencyException) when (!VillagerItemExists(id))
             {
                 return NotFound();
             }
@@ -104,6 +104,7 @@ namespace ACNHApi.Controllers
         {
             var villagerItem = new VillagerResponse
             {
+                Id = acnhVillagerDTO.Id,
                 Filename = acnhVillagerDTO.Filename,
                 Name = new Models.Name
                 {
@@ -148,20 +149,20 @@ namespace ACNHApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodoItem(int id)
         {
-            var todoItem = await _context.VillagerItems.FindAsync(id);
+            var villagerItem = await _context.VillagerItems.Include(i => i.Name).Include(i => i.Catchtranslations).Where(i => i.Id == id).FirstOrDefaultAsync();
 
-            if (todoItem == null)
+            if (villagerItem == null)
             {
                 return NotFound();
             }
 
-            _context.VillagerItems.Remove(todoItem);
+            _context.VillagerItems.Remove(villagerItem);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool TodoItemExists(long id) =>
+        private bool VillagerItemExists(long id) =>
              _context.VillagerItems.Any(e => e.Id == id);
 
         private static VillagerResponseTDO ACNHItemToDTO(VillagerResponse villagerItem) =>
