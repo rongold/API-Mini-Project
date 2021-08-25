@@ -161,7 +161,7 @@ namespace ACNHApi.Controllers
         }
 
         private bool VillagerItemExists(long id) =>
-             _context.VillagerItems.Any(e => e.Id == id);
+             _context.BugItems.Any(e => e.Id == id);
 
         private static VillagerResponseTDO VillagerItemToDTO(VillagerResponse villagerItem) =>
             new VillagerResponseTDO
